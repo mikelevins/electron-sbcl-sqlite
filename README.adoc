@@ -5,7 +5,7 @@ mikel evins <mikel@evins.net>
 
 == Overview
 
-A very simple Electron boilerplate that sets up an app whose application logic is handled by a Lisp child process, whose UI is handled by Electron, and whose persistence solution is SQLite. Uses sbcl with quicklisp and Hunchentoot to build the Lisp helper process, and electron-packager to build delivered apps.
+A very simple Electron boilerplate that sets up an app whose application logic is handled by a Lisp child process, whose UI is handled by Electron, and whose persistence solution is SQLite. Uses sbcl with quicklisp and Hunchentoot to build the Lisp helper process, and electron-packager to build delivered app.
 
 Assumes that a suitable version of SQLite3 is installed and findable by CFFI.
 
