@@ -26,7 +26,7 @@ Tested on macOS Big Sur with SBCL 2.0.11 and SQlite3 3.32.3.
 
 == Extending and Adapting It
 
-The simple project's purpose is to set up a bare minimum framework showing how you can build an Electron app on Lisp and SQLite. It doesn't do much more than that. The launched app fetches SBCL's `\*FEATURES\*` list and uses the SQLite interface to get SQLite3's version string and its list of compile_options. To do more than that, you'll have to explore the tools and APIs yourself.
+The simple project's purpose is to set up a bare minimum framework showing how you can build an Electron app on Lisp and SQLite. It doesn't do much more than that. The launched app fetches SBCL's `\*FEATURES*` list and uses the SQLite interface to get SQLite3's version string and its list of compile_options. To do more than that, you'll have to explore the tools and APIs yourself.
 
 A good starting place might be to look at the easy-handler definition for "/" in the file "electron-sbcl-sqlite/lisp/src/electron-sbcl-sqlite.lisp". Its `LET*` bindings use the `SQLITE` library's APIs to execute a simple SQL statement and a pragma to get the SQLite data that is displayed in the window.
 
