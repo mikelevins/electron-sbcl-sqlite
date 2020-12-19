@@ -1,0 +1,8 @@
+node_modules
+lispapp
+lispapp.exe
+electron-lisp-boilerplate-darwin-x64
+electron-lisp-boilerplate-win32-x64
+package-lock.json
+
+

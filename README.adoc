@@ -1,0 +1,9 @@
+= electron-sbcl-sqlite
+v0.0.1
+mikel evins <mikel@evins.net>
+:toc:
+
+== Overview
+
+A very simple Electron boilerplate that sets up an app whose application logic is handled by a Lisp child process, whose UI is handled by Electron, and whose persistence is handled by SQLite. Uses sbcl with quicklisp and Hunchentoot to build the Lisp helper process, and electron-packager to build delivered apps.
+
