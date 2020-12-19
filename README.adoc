@@ -5,5 +5,28 @@ mikel evins <mikel@evins.net>
 
 == Overview
 
-A very simple Electron boilerplate that sets up an app whose application logic is handled by a Lisp child process, whose UI is handled by Electron, and whose persistence is handled by SQLite. Uses sbcl with quicklisp and Hunchentoot to build the Lisp helper process, and electron-packager to build delivered apps.
+A very simple Electron boilerplate that sets up an app whose application logic is handled by a Lisp child process, whose UI is handled by Electron, and whose persistence solution is SQLite. Uses sbcl with quicklisp and Hunchentoot to build the Lisp helper process, and electron-packager to build delivered apps.
+
+Assumes that a suitable version of SQLite3 is installed and findable by CFFI.
+
+Tested on macOS Big Sur with SBCL 2.0.11 and SQlite3 3.32.3.
+
+== Building and Running the App
+
+1. Ensure that these dependencies are properly installed:
+   . https://nodejs.org/en/download/[A recent version of node and npm]
+   . https://github.com/electron/electron-packager[electron-packager]
+   . http://www.sbcl.org/platform-table.html[SBCL]
+   . https://www.quicklisp.org/beta/[Quicklisp]
+
+2. Using git, clone this repository.
+3. cd into the cloned repository and run sh ./build.sh
+4. Run the built app:
+   `open electron-sbcl-sqlite-darwin-x64/electron-sbcl-sqlite.app`
+
+== Extending and Adapting It
+
+The simple project's purpose is to set up a bare minimum framework showing how you can build an Electron app on Lisp and SQLite. It doesn't do much more than that. The launched app fetches SBCL's `*FEATURES*` list and uses the SQLite interface to get SQLite3's version string and its list of compile_options. To do more than that, you'll have to explore the tools and APIs yourself.
+
+A good starting place might be to look at the easy-handler definition for "/" in the file "electron-sbcl-sqlite/lisp/src/electron-sbcl-sqlite.lisp". Its `LET*` bindings use the `SQLITE` library's APIs to execute a simple SQL statement and a pragma to get the SQLite data that is displayed in the window.
 
